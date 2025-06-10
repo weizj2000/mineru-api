@@ -1,0 +1,10 @@
+fastapi==0.115.12
+requests==2.32.3
+magic-pdf[full]
+pydantic-settings=2.9.1
+python-multipart==0.0.20
+uvicorn==0.34.3
+opencv-python==4.11.0.86
+ultralytics==8.3.151
+doclayout_yolo
+rapid_table
