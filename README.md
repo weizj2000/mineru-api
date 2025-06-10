@@ -53,7 +53,7 @@ python app/main.py
     - **total_tasks**：总提交任务数，类型为`int`。
 - **状态码**：`202 Accepted`
 - **示例请求**：
-    - **上传文件**：
+  - **上传文件**：
 ```python
 import requests
 
@@ -62,7 +62,7 @@ files = {'files': open('test_file.txt', 'rb')}
 response = requests.post(url, files=files)
 print(response.json())
 ```
-    - **提交文件路径**：
+  - **提交文件路径**：
 ```python
 import requests
 import json
@@ -72,6 +72,14 @@ payload = {'file_paths': ['https://example.com/test_file.txt']}
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 response = requests.post(url, data=json.dumps(payload), headers=headers)
 print(response.json())
+# 响应示例
+# {
+#     "task_ids": [
+#         "54c90e9a-4bd3-4b9d-8a5e-28a107e71958"
+#     ],
+#     "submit_time": "2025-06-08T17:09:19.027717",
+#     "total_tasks": 1
+# }
 ```
 
 ### 2. 查询任务结果
