@@ -109,4 +109,22 @@ import requests
 url = 'http://0.0.0.0:8000/api/v1/extract/task/your_task_id'
 response = requests.get(url)
 print(response.json())
+
+# 响应示例
+# {
+#     "task_id": "54c90e9a-4bd3-4b9d-8a5e-28a107e71958",
+#     "status": "completed",
+#     "data": {
+#         "is_cache": false,
+#         "content": "Major differences between the two versions include:\n\n• The artifact is directly based on the vLLM code base, whereas the official release is a standalone Python library, making it more extensible and non-intrusive to backend inference engines. • The artifact is not fault-tolerant, whereas the official release provides fault tolerance for each component. • The official release is still being actively developed, and has supported or will support a series of new features, such as scalable API servicing via distributed request frontends, support for newer versions of vLLM and more models, further improvements of the scheduling policies, etc.\n\nThe artifact is sufficient to reproduce the experiment results in this paper. However, if you want to use Llumnix in production or conduct further research, we do recommend the official release.",
+#         "status": "success",
+#         "markdown_path": "s3://test/deepservice/e38a463d9f646e40ca4f039aeec75e76/full.md",
+#         "image_dir": "s3://test/deepservice/e38a463d9f646e40ca4f039aeec75e76/images",
+#         "message": null
+#     },
+#     "error": null,
+#     "created_at": 1749373759.028917,
+#     "started_at": 1749373759.0306718,
+#     "completed_at": 1749374065.020579
+# }
 ```
